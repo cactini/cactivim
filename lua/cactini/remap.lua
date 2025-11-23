@@ -51,9 +51,16 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", {silent = true})
 -- TELESCOPE
 --
 
+-- Requirements
 local builtin = require('telescope.builtin')
+
+-- Find files
 vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = 'Telescope find files' })
+
+-- Find git files
 vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Telescope find git files' })
+
+-- Grep in files
 vim.keymap.set('n', '<leader>ps', function() 
     builtin.grep_string({ search = vim.fn.input("Grep > ")});
 end)
@@ -63,15 +70,17 @@ end)
 -- HARPOON
 --
 
+-- Requirements
 local harpoon = require("harpoon")
-
--- REQUIRED
 harpoon:setup()
--- REQUIRED
 
+-- Add
 vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
+
+-- View files
 vim.keymap.set("n", "<leader>A", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
+-- Goto file n
 vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end)
 vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end)
 vim.keymap.set("n", "<leader>3", function() harpoon:list():select(3) end)
@@ -84,5 +93,5 @@ vim.keymap.set("n", "<leader>9", function() harpoon:list():select(9) end)
 vim.keymap.set("n", "<leader>0", function() harpoon:list():select(10) end)
 
 -- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set("n", "<C-S-P>", function() harpoon:list():prev() end)
-vim.keymap.set("n", "<C-S-N>", function() harpoon:list():next() end)
+vim.keymap.set("n", "<leader>n", function() harpoon:list():prev() end)
+vim.keymap.set("n", "<leader>N", function() harpoon:list():next() end)
