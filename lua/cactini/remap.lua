@@ -23,9 +23,9 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Delete and replace to void, and copy to clipboard
-vim.keymap.set("n", "<leader>y", "\"_+y")
-vim.keymap.set("v", "<leader>y", "\"_+y")
-vim.keymap.set("n", "<leader>Y", "\"_+Y")
+vim.keymap.set("n", "<leader>y", '"+y')
+vim.keymap.set("v", "<leader>y", '"+y')
+vim.keymap.set("n", "<leader>Y", '"+Y')
 
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
@@ -95,3 +95,5 @@ vim.keymap.set("n", "<leader>0", function() harpoon:list():select(10) end)
 -- Toggle previous & next buffers stored within Harpoon list
 vim.keymap.set("n", "<leader>n", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<leader>N", function() harpoon:list():next() end)
+
+

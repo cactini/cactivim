@@ -4,7 +4,7 @@ return {
     name = "catppuccin",
     priority = 1000 ,
     auto_integrations = true,
-    flavor = macchiato,
+    flavor = "macchiato",
     enable = true
     }
 }
