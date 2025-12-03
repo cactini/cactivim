@@ -96,4 +96,11 @@ vim.keymap.set("n", "<leader>0", function() harpoon:list():select(10) end)
 vim.keymap.set("n", "<leader>n", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<leader>N", function() harpoon:list():next() end)
 
+-- 
+-- TINY-CODE-ACTIONS
+--
 
+-- Add code actions with <leader>ca
+vim.keymap.set({ "n", "x" }, "<leader>ca", function()
+	require("tiny-code-action").code_action()
+end, { noremap = true, silent = true })
