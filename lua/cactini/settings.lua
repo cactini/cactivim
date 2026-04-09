@@ -41,10 +41,3 @@ vim.opt.updatetime = 50
 
 -- Setting color scheme (macchiato for life)
 vim.cmd.colorscheme "catppuccin-macchiato"
-
--- 
--- SHOWKEYS
---
-
--- Run on startup
-vim.cmd('ShowkeysToggle')
