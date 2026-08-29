@@ -8,12 +8,8 @@ vim.g.mapleader = " "
 -- File manager
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
--- gl and gh for $ and ^
-vim.keymap.set("n", "gh", "^")
-vim.keymap.set("n", "gl", "$")
-
+-- jj escape
 vim.keymap.set("i", "jj", "<Esc>")
-vim.keymap.set("i", "jk", "<Esc>")
 
 -- Move with JK
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
